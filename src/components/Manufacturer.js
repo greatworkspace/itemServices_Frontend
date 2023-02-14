@@ -20,18 +20,12 @@ export default function ManufacturerSection () {
     return (
         <>
             <div className = " p-4 w-full item-center justify-center">
-                <img className="w-full" src={bg} alt = "Bg_logo"/>
-                <div className ="flex m-4 p-4">
+                <img className="w-1/8" src={bg} alt = "Bg_logo"/>
+                <div className ="m-4 p-4">
                     {/* <WarehouseProperties /> */}
-                   <RedistributorSection />
+                   <RedistributorSection data = {data} />
                 </div>
             </div>
-            {/* <main className="flex mx-2 px-4">
-                <WholesalesSection data = {data} /> 
-            </main> */}
-            <article>
-                <RetailerSection data = { data } name= { data.name } capacity ={ data.capacity}/>
-            </article>
            
         </>
     )
