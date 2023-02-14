@@ -7,7 +7,7 @@ export default function RetailerSection ({data, displayContent}) {
     function RetailStore ({name, capacity}) {
         return (
             <>
-                <main className = "box-content h-64 w-96 mx-2 border-2 item-center display: inline-block rounded">
+                <main className = "box-content h-64 w-96 border-2 item-center display: inline-block rounded">
                     <img className = "object-none object-top bg-yellow-300 w-96 h-32 rounded-lg" src={img_1} alt = {'Display'}/>
                     <article className="p-2 text-sm">
                         <p className = "text-sm font-normal">Capacity: {capacity} </p>
@@ -26,7 +26,7 @@ export default function RetailerSection ({data, displayContent}) {
             <main className = "grid gap-2 grid-cols-3 grid-rows-3">
                 {displayContent && data.map((each) =>{
                             return(
-                                <main className = "m-4" key = {each.id}>                            
+                                <main key = {each.id}>                            
                                 <article><RetailStore name= { each.name } capacity ={ each.capacity}/></article>  
                                 </main>
 

@@ -4,6 +4,7 @@ import WholesalesSection from './Wholesales';
 import bg from '../bg_1.svg';
 import RedistributorSection from './Redistributor';
 import WarehouseProperties from './WarehouseProperties';
+import NavBar from './NavBar';
 
 export default function ManufacturerSection () {
 
@@ -20,8 +21,9 @@ export default function ManufacturerSection () {
     return (
         <>
             <div className = " p-4 w-full item-center justify-center">
+                <NavBar />
                 <img className="w-1/8" src={bg} alt = "Bg_logo"/>
-                <div className ="m-4 p-4">
+                <div className ="mt-16 mx-8">
                     {/* <WarehouseProperties /> */}
                    <RedistributorSection data = {data} />
                 </div>

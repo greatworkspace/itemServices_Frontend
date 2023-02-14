@@ -11,9 +11,9 @@ export default function Selectdropdown ({name, title, placeHolder, displayConten
 
     function Displaydropdown () {
         return (
-            <>
-                <div className = "w-72 font medium h-80 ">
-                    <h2 className = "font-bold text-lg uppercase mb-4">{title}</h2>
+            <>  
+                <h2 className = "font-bold text-lg uppercase mb-4">{title}</h2>
+                <div className = "w-60 font medium h-80 mb-0 ">                    
                     <div 
                         onClick = {() => setOpen(!open)}
                         className = "bg-white w-full p-2 flex item-center justify-between rounded">
@@ -38,9 +38,10 @@ export default function Selectdropdown ({name, title, placeHolder, displayConten
                         {name.map((each) => (
                             <li key = {each.id} 
                                 className = "p-2 text-sm hover:bg-red-600 hover:text-white cursor: pointer"
-                                onClick = {(displayContent) => {
+                                onClick = {() => {
                                     if(each.name.toLowerCase() !== selected.toLowerCase()){
                                         setSelected(each.name);
+                                        setOpen(!open);
                                         return (displayContent)
                                     }}
                                 }  
