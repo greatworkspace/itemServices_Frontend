@@ -3,6 +3,7 @@ import bg from '../img/bg_1.svg';
 import RedistributorSection from './Redistributor';
 import NavBar from './NavBar';
 import ProductSection from './product';
+import LogisticsSection from './Logistics';
 
 export default function ManufacturerSection () {
 
@@ -23,19 +24,24 @@ export default function ManufacturerSection () {
                 <NavBar />
 
                 {/* Background image display */}
-                <img src={bg} className = "object-center object-fill" alt = "Bg_logo"/>
+                <img src={bg} className = "object-center object-fill w-full" alt = "Bg_logo"/>
 
                 
                 <div className ="mt-16 mx-8">
                     {/* Product component */}
                     <ProductSection />
 
+                    {/* logistics Component */}
+                    <LogisticsSection />
+
                     {/* redributors and warehouse properties */}
                    <RedistributorSection data = {data} />
+
+                   
                 </div>
                 
-                {/* logistics Component */}
-
+                
+                
             </div>
            
         </>

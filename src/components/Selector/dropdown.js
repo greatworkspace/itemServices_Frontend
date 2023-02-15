@@ -12,7 +12,7 @@ export default function Selectdropdown ({name, title, placeHolder, displayConten
     function Displaydropdown () {
         return (
             <>  
-                <h2 className = "font-bold text-lg uppercase mb-8">{title}</h2>
+                <h2 className = "font-bold text-lg uppercase tracking-wide hover:border-b-2 hover:border-red-600 mb-8  ">{title}</h2>
                 <div className = "w-60 font medium h-24 z-50 ">                    
                     <div 
                         onClick = {() => setOpen(!open)}

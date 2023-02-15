@@ -26,7 +26,7 @@ export default function RedistributorSection ({data}) {
     function DisplayRedistributorWarehouse() {
         return (
             <>
-                <div className="flex mt-16 space-x-32">
+                <div className="lg:flex mt-16 lg:space-x-32 md:block md:space-x-0">
                    <main> <Selectdropdown
                         name = {list} 
                         title = {title} 

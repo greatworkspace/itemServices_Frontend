@@ -22,7 +22,7 @@ export default function NavBar () {
             <main className = "lg:flex py-4  md:block ">
                 <LogoDisplay />                
 
-                <div className = "lg:flex w-2/5 space-x-4 place-content end sm:block space-x-0 ">
+                <div className = "lg:flex w-2/5 space-x-8 place-content end sm:block space-x-2 ">
                     <div className = "p-2 font-bold text-based border-1 h-12 hover:bg-red-600 hover:text-white cursor: pointer">Dashboard</div>
                     <div className = "p-2 font-bold text-based border-1 h-12 hover:bg-red-600 hover:text-white cursor: pointer">Location</div>
                     <div className = "p-2 font-bold text-based border-1 h-12 hover:bg-red-600 hover:text-white cursor: pointer">Notifications</div>
