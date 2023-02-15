@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
-import RetailerSection from './Retailer';
-import WholesalesSection from './Wholesales';
-import bg from '../bg_1.svg';
+import bg from '../img/bg_1.svg';
 import RedistributorSection from './Redistributor';
-import WarehouseProperties from './WarehouseProperties';
 import NavBar from './NavBar';
+import ProductSection from './product';
 
 export default function ManufacturerSection () {
 
@@ -21,12 +19,23 @@ export default function ManufacturerSection () {
     return (
         <>
             <div className = " p-4 w-full item-center justify-center">
+                {/* Navbar component */}
                 <NavBar />
-                <img className="w-1/8" src={bg} alt = "Bg_logo"/>
+
+                {/* Background image display */}
+                <img src={bg} className = "object-center object-fill" alt = "Bg_logo"/>
+
+                
                 <div className ="mt-16 mx-8">
-                    {/* <WarehouseProperties /> */}
+                    {/* Product component */}
+                    <ProductSection />
+
+                    {/* redributors and warehouse properties */}
                    <RedistributorSection data = {data} />
                 </div>
+                
+                {/* logistics Component */}
+
             </div>
            
         </>

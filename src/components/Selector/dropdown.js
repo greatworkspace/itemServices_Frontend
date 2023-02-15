@@ -12,8 +12,8 @@ export default function Selectdropdown ({name, title, placeHolder, displayConten
     function Displaydropdown () {
         return (
             <>  
-                <h2 className = "font-bold text-lg uppercase mb-4">{title}</h2>
-                <div className = "w-60 font medium h-80 mb-0 ">                    
+                <h2 className = "font-bold text-lg uppercase mb-8">{title}</h2>
+                <div className = "w-60 font medium h-24 z-50 ">                    
                     <div 
                         onClick = {() => setOpen(!open)}
                         className = "bg-white w-full p-2 flex item-center justify-between rounded">
@@ -21,8 +21,8 @@ export default function Selectdropdown ({name, title, placeHolder, displayConten
                         {selected}
                         <BiChevronDown size = {20} />
                     </div>
-                    <ul className={`bg-white mt-2 overflow-y-auto ${
-                        open ? "max-h-40" : "max-h-0"
+                    <ul className={`bg-white mt-2 overflow-y-auto  ${
+                        open ? "max-h-40 absolute w-60 " : "max-h-0"
                     }`}  >
                         {/* <div className = "flex items-center px-2">
                             <AiOutlineSearch size = {18} 
@@ -61,10 +61,7 @@ export default function Selectdropdown ({name, title, placeHolder, displayConten
 
     return (
         <>
-            <Displaydropdown />
-
-            
-            
+            <Displaydropdown />            
         </>
     )
 }

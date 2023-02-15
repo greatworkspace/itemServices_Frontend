@@ -4,8 +4,8 @@ import RetailerSection from './Retailer'
 
 
 export default function RedistributorSection ({data}) {
-    const title = "Redistributor list";
-    const titleW = "Warehouse Properties list";
+    const title = "Redistributor";
+    const titleW = "Warehouse Properties";
     //change some state
     const [displayContent, setDisplayContent] = useState(true);
     
@@ -26,7 +26,7 @@ export default function RedistributorSection ({data}) {
     function DisplayRedistributorWarehouse() {
         return (
             <>
-                <div className="flex space-x-32">
+                <div className="flex mt-16 space-x-32">
                    <main> <Selectdropdown
                         name = {list} 
                         title = {title} 
@@ -53,17 +53,8 @@ export default function RedistributorSection ({data}) {
 
     function DisplayList() {
         return (
-            <>
-                
-                <DisplayRedistributorWarehouse />
-
-                <RetailerSection 
-                    data = { data } 
-                    name= { data.name } 
-                    capacity ={ data.capacity}
-                    displayContent = {displayContent}
-                />  
-                    
+            <>                
+                <DisplayRedistributorWarehouse />                   
                     
             </>
         )
@@ -71,6 +62,12 @@ export default function RedistributorSection ({data}) {
     return (
         <>            
             <DisplayList />
+            <RetailerSection 
+                    data = { data } 
+                    name= { data.name } 
+                    capacity ={ data.capacity}
+                    displayContent = {displayContent}
+                />  
         </>
     )
 }
